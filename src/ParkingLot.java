@@ -3,10 +3,12 @@ public class ParkingLot {
     private int capacity;
     private int carsparked;
 
-    public ParkingLot(int capacity) {
+    public ParkingLot(int capacity)
+    {
         this.capacity = capacity;
 
     }
+
 
     public Boolean isfull() {
 
@@ -15,19 +17,29 @@ public class ParkingLot {
 
             return true;
 
-        } else
+        } else {
             return false;
 
+        }
     }
 
-    public void addCar() {
+    public void addCar()
+    {
+
         capacity--;
     }
-   public void unpark() {
+
+   public void unpark()
+   {
 
        capacity++;
    }
 
-   }
 
+  public void addjeep()
+  {
 
+      capacity--;
+
+  }
+  }

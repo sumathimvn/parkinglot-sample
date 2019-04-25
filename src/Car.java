@@ -1,16 +1,36 @@
-public class Car {
+public class Car implements Parkable{
 
     private String Regno;
 
-    public void park(ParkingLot parkingLot){
+    @Override
+    public void park(ParkingLot parkinglot) {
 
-        if (parkingLot.isfull())
+
+        if (parkinglot.isfull())
         {
             System.out.println("Parking is full");
 
-            parkingLot.addCar();
+        }
+        else
+            {
+
+
+            parkinglot.addCar();
+
+            System.out.println("Car is parked");
         }
 
 
-    }
+}
+
+
+//*   public void unpark(ParkingLot parkinglot)
+//{
+
+   //       parkinglot.unpark();
+    //      System.out.println("Parking is available");
+
+   // }
+
+
 }
