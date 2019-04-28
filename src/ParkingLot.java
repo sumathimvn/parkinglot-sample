@@ -1,11 +1,12 @@
 public class ParkingLot {
 
-    private int capacity;
-    private int carsparked;
+    public int capacity;
+
 
     public ParkingLot(int capacity)
     {
         this.capacity = capacity;
+        System.out.println("Total number of parkingslots:" +capacity);
 
     }
 
@@ -23,23 +24,28 @@ public class ParkingLot {
         }
     }
 
-    public void addCar()
+    public int addCar()
     {
 
-        capacity--;
+        capacity = capacity-1;
+        System.out.println("Available parkinglots: "+capacity);
+        return capacity;
+
     }
 
-   public void unpark()
+   public int unpark()
    {
 
-       capacity++;
+       capacity =capacity+1;
+       System.out.println("Available parkinglots after unparking:"+capacity);
+       return capacity;
    }
 
 
-  public void addjeep()
+  public  int addjeep()
   {
 
       capacity--;
-
+      return capacity;
   }
   }

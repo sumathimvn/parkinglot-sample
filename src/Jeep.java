@@ -1,27 +1,35 @@
-public class Jeep implements Parkable
-{
+public class Jeep extends Vehicle {
 
-@Override
-            public void park (ParkingLot parkinglot)
-            {
+    public boolean park(ParkingLot parkinglot) {
 
 
-            if (parkinglot.isfull())
-            {
-                System.out.println("Parking is full");
+        if (parkinglot.isfull()) {
+            System.out.println("Parking is full");
+            return true;
 
-            }
-            else
-                {
+        } else {
 
-                System.out.println("Jeep is parked");
-                parkinglot.addjeep();
-
-            }
-
+            parkinglot.addjeep();
+            System.out.println("Jeep is parked in parking lot");
 
 
         }
 
 
+        return false;
+    }
+
+    @java.lang.Override
+    public boolean unpark(ParkingLot parkinglot) {
+
+
+           parkinglot.unpark();
+           System.out.println("Parking is available");
+
+           return true;
+    }
+
 }
+
+
+

@@ -1,36 +1,28 @@
-public class Car implements Parkable{
-
-    private String Regno;
-
-    @Override
-    public void park(ParkingLot parkinglot) {
+public class Car extends Vehicle {
 
 
-        if (parkinglot.isfull())
-        {
+    public boolean park(ParkingLot parkinglot) {
+
+        if (parkinglot.isfull()) {
             System.out.println("Parking is full");
-
-        }
-        else
-            {
-
+            return true;
+        } else {
 
             parkinglot.addCar();
-
-            System.out.println("Car is parked");
         }
 
 
+        return false;
+    }
+
+
+    public boolean  unpark(ParkingLot parkinglot)
+{
+
+       parkinglot.unpark();
+       System.out.println("Parking is available");
+
+       return true;
 }
 
-
-//*   public void unpark(ParkingLot parkinglot)
-//{
-
-   //       parkinglot.unpark();
-    //      System.out.println("Parking is available");
-
-   // }
-
-
-}
+    }
